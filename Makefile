@@ -47,4 +47,3 @@ $(PROTO_FILES):
 move-protos:
 	mv -v "$(ROOT_DIR)/github.com/ShatteredRealms" "$(ROOT_DIR)/pkg/"
 	rm -r "$(ROOT_DIR)/github.com"
-	rm -r "$(ROOT_DIR)/google.golang.org"
