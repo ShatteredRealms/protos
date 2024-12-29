@@ -42,7 +42,7 @@ service CharacterService {
 
   rpc EditCharacter(EditCharacterRequest) returns (Character) {
     option (google.api.http) = {
-      patch : "/v1/characters/id/{id}"
+      patch : "/v1/characters/id/{character.id}"
       body : "*"
     };
   }
