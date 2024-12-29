@@ -1,8 +1,0 @@
-syntax = "proto3";
-package sro;
-option go_package = "github.com/ShatteredRealms/go-common-service/pkg/pb;pb";
-
-message QueryFilters {
-  int32 count = 1;
-  int32 offset = 2;
-}
