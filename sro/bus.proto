@@ -3,7 +3,6 @@ package sro;
 option go_package = "github.com/ShatteredRealms/go-common-service/pkg/pb;pb";
 
 import "google/api/annotations.proto";
-import "google/protobuf/empty.proto";
 
 service BusService {
   rpc ResetReaderBus(BusTarget) returns (ResetBusResponse) {
