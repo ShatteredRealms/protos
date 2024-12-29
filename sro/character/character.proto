@@ -40,7 +40,7 @@ service CharacterService {
     };
   }
 
-  rpc EditCharacter(Character) returns (Character) {
+  rpc EditCharacter(EditCharacterRequest) returns (Character) {
     option (google.api.http) = {
       patch : "/v1/characters/id/{id}"
       body : "*"
@@ -73,6 +73,11 @@ message GetUserCharactersRequest {
   string owner_id = 3;
 }
 
+message EditCharacterRequest {
+  google.protobuf.FieldMask mask = 1;
+  Character character = 2;
+}
+
 message CreateCharacterRequest {
   string owner_id = 1;
   string name = 2;
@@ -82,18 +87,17 @@ message CreateCharacterRequest {
 }
 
 message Character {
-  google.protobuf.FieldMask mask = 1;
-  string id = 2;
-  string owner_id = 3;
-  string name = 4;
-  string gender = 5;
-  string realm = 6;
-  int32 play_time = 7;
-  sro.Location location = 8;
-  string dimension_id = 9;
-  int64 created_at = 10;
-  int64 updated_at = 11;
-  int64 deleted_at = 12;
+  string id = 1;
+  string owner_id = 2;
+  string name = 3;
+  string gender = 4;
+  string realm = 5;
+  int32 play_time = 6;
+  sro.Location location = 7;
+  string dimension_id = 8;
+  int64 created_at = 9;
+  int64 updated_at = 10;
+  int64 deleted_at = 11;
 }
 
 message Characters {
