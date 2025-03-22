@@ -156,6 +156,7 @@ message ChatChannel {
   string id = 1;
   string name = 2;
   string dimension_id = 3;
+  bool public = 4;
 }
 
 message ChatChannels { repeated ChatChannel channels = 1; }
@@ -185,4 +186,5 @@ message UpdateChatChannelRequest {
   string channel_id = 1;
   oneof optional_name { string name = 2; }
   oneof optional_dimension { string dimension = 3; }
+  oneof optional_public { bool public = 4; }
 }
