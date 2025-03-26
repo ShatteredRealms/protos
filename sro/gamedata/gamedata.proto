@@ -2,4 +2,4 @@ syntax = "proto3";
 package sro.gamedata;
 option go_package = "github.com/ShatteredRealms/gamedata-service/pkg/pb;pb";
 
-service GamedataService {}
+service GameDataService {}
