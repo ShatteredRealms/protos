@@ -3,6 +3,7 @@ package sro.gameserver;
 option go_package = "github.com/ShatteredRealms/gameserver-service/pkg/pb;pb";
 
 import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
 import "sro/globals.proto";
 
 service GameServerDataService {
