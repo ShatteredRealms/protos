@@ -13,4 +13,4 @@ service GameServerDataService {
   }
 }
 
-message GameServerDetails { int count = 0; }
+message GameServerDetails { int32 count = 0; }
